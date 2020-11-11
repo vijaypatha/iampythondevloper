@@ -6,3 +6,13 @@ city_name = print(input("What is the name of city that you grew up in?"))
 pet_name = print(input("What is the name of your pet?"))
 #4. Combine the name of their city and pet and show them their band name.
 print("Your band name could be " + city_name +"" + pet_name)
+
+####### TIP Calculator 
+print("Welcome to the tip calculator.")
+bill = float(input("What was the total bill?\n"))
+split = float(input("How many people to split the bill?\n"))
+perc = float(input("What percentage tip would you like to give? 10, 12 , or 15?\n"))
+result = round(( bill / split ) + (( bill / split ) * (perc / 100 )),2)
+
+print("Each person should pay: " + str(result))
+print(f"each person should pay: {result}")
