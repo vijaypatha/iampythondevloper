@@ -16,3 +16,24 @@ result = round(( bill / split ) + (( bill / split ) * (perc / 100 )),2)
 
 print("Each person should pay: " + str(result))
 print(f"each person should pay: {result}")
+
+####### Leap year
+if year % 4 != 0:
+  print("Not a Leap year")
+elif year % 100 != 0:
+  print("leap")
+elif year % 400 == 0:
+  print("leap")
+else:
+  print('not leap')
+
+# if year % 4 == 0:
+#   if year % 100 == 0:
+#     if year % 400 ==0:
+#       print("leap")
+#     else:
+#       print("not leap")
+#   else:
+#     print("Leap")
+# else:
+#   print("Not leap")
