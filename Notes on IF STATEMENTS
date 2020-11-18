@@ -1,0 +1,100 @@
+# #STEP 1: Remember the Syntax Structure
+
+# something = "anything"
+# command = "do this"
+
+# #Sytax 1: Simple if/else
+# if something:
+#   command
+# else:
+#   command
+
+# #Sytax 2: if/elif/else
+# if something:
+#   command
+# elif something:
+#   command
+# elif something:
+#   command
+# else:
+#   command 
+
+# #Sytax 3: nested ifs
+
+# if something:
+#   if something:
+#     command
+#   else:
+#     command
+# else:
+#   command
+
+# # STEP 2: Read the structure 
+
+# Indentation indicates block of code 
+# 1st block is if 
+# 2nd block is else
+
+# in syntax 3; the first block of code if has another if block init. 
+
+# in syntax 2; we have if block, elif block, elif block, and else block.
+
+# STEP 3: UNDERSTAND THESE EXCERSIZES
+
+# EXCERCISE #1 https://tinyurl.com/y6ztsevq
+
+height = int(input("What is your height?"))
+if height > 120:
+  print(f"You can ride!")
+else:
+  print(f"You cannot ride. Come back when you grow taller")
+
+# EXCERCISE #2 https://tinyurl.com/y4cc4rtx
+if height > 120:
+  print(f"You can ride!")
+  age = int(input("What is your age?"))
+  if age > 18:
+    print(f"You pay $12")
+  elif age >= 12 and age <= 18:
+    print(f"You pay $7")
+  else:
+    print(f"You pay $5")
+else:
+  print(f"You cannot ride. Come back when you grow taller")
+
+# EXCERCISE #3 https://tinyurl.com/y2yqj73u
+
+year = int(input("Enter a year (YYYY); and I will tell you weather its a leap year or not!"))
+
+if year % 4 == 0:
+  if year % 100 == 0:
+    if year % 400 == 0:
+      print(f"Yes! {year} is a leap Year, enjoy the extra day in your life")
+    else:
+      print(f"{year} is not a leap year")
+  else:
+    print(f"{year} is a leap year, enjoy the extra day in your life.")
+else:
+  print(f"{year} is not a leap year!")
+
+# EXCERCISE # 4 https://tinyurl.com/y5qrcaua
+bill = 0
+if height > 120:
+  print(f"You can ride!")
+  age = int(input("What is your age?"))
+  if age > 18:
+    bill = 12
+    print(f"You pay {bill}")
+  elif age >= 12 and age <= 18:
+    bill = 7
+    print(f"You pay {bill}")
+  else:
+    bill = 5
+    print(f"You pay {5}")
+  want_photo = input("Do you want a photo? Y or N \n")
+  if want_photo == "Y":
+    #Add $3 to the bill.
+    bill += 3
+    print(f"Your bill is {bill}")
+else:
+  print(f"You cannot ride. Come back when you grow taller")
