@@ -1,4 +1,5 @@
-# Learn the Syntax
+'''
+# STEP 1: Learn the Syntax
 
 # Loop 1
 for item in list_of_items:
@@ -13,5 +14,35 @@ while something_is_true:
   #Do something repeatedly
 
 
+# STEP 2 Understand what the Syntax is doing
 
-# Understand what the Syntax is doing
+
+
+# STEP 3: Learn problem solving with Loops
+'''
+
+
+
+# Understand these excerises 
+word_list = ["baboon", "camel", "heidi"]
+
+import random
+chosen_word = random.choice(word_list)
+print(f"The chosen word is {chosen_word}")
+
+display = []
+for letter in chosen_word:
+  display += "_"
+print(display)
+
+
+guess = input("Guess a letter\n").lower()
+
+
+
+for position in range(len(chosen_word)):
+  letter = chosen_word[position]
+  if letter == guess:
+    display[position] = letter
+
+print(display)
