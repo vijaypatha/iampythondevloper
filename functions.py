@@ -48,3 +48,19 @@ test_w = int(input("Width of wall: "))
 coverage = 5
 
 paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+## PRIME NUMBER CHECKER
+n = int(input("Check this number: "))
+
+def prime_checker(number):
+  is_prime = True
+  for i in range(2,number-1):
+    if number % i == 0:
+      is_prime = False
+  if is_prime:
+    print(f"{number} is Prime")
+  else:
+    print(f"{number} is Not a Prime")
+
+prime_checker(number = n)
