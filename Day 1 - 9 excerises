@@ -1,0 +1,52 @@
+######## DAY 1 - Combining Strings ########
+print("Welcome to Day 1 - 9 excerises")
+#1. Create a greeting for your program.
+print("DAY 1")
+#2. Ask the user for the city that they grew up in.
+city = input("What is name of the city that you grew up in?\n")
+#3. Ask the user for the name of a pet.
+pet = input("What is the name of your pet?\n")
+#4. Combine the name of their city and pet and show them their band name.
+print(f"Your Brand Name should be: {city} {pet}")
+
+
+######## DAY 2 ########
+print("Day 2.1 \n Write a program that adds the digits in a 2 digit number. \n e.g. if the input was 35, then the output should be 3 + 5 = 8")
+
+'''
+PSUEDO CODE
+
+Input two digits
+access the the digits and store them in a variable 
+convert the string into int
+add the two digits 
+print solution
+
+'''
+
+number = input("Enter a two digit number\n")
+first_digit = int(number[0])
+second_digit = int(number[1])
+print(f"You have entereted {number}, the sum of its digits is {first_digit + second_digit}")
+
+print("********ALTERNATIVE APPROCH**************")
+
+'''
+PSUEDO CODE
+
+User inputs a number 
+number is passed through a function called getSum to add all the digits 
+
+Access the digits by converting the int to list
+
+'''
+
+n = int(input("Enter any number, I will tell you the sum of its digits?"))
+
+def getSum(number):
+  sum = 0 
+  while number !=0:
+    sum += number % 10
+    number = int(number / 10)
+  print(sum)
+getSum(number = n)
