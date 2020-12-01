@@ -1,52 +1,113 @@
-######## DAY 1 - Combining Strings ########
-print("Welcome to Day 1 - 9 excerises")
-#1. Create a greeting for your program.
-print("DAY 1")
-#2. Ask the user for the city that they grew up in.
-city = input("What is name of the city that you grew up in?\n")
-#3. Ask the user for the name of a pet.
-pet = input("What is the name of your pet?\n")
-#4. Combine the name of their city and pet and show them their band name.
-print(f"Your Brand Name should be: {city} {pet}")
+# ######## DAY 1 - Combining Strings ########
+# print("Welcome to Day 1 - 9 excerises")
+# #1. Create a greeting for your program.
+# print("DAY 1")
+# #2. Ask the user for the city that they grew up in.
+# city = input("What is name of the city that you grew up in?\n")
+# #3. Ask the user for the name of a pet.
+# pet = input("What is the name of your pet?\n")
+# #4. Combine the name of their city and pet and show them their band name.
+# print(f"Your Brand Name should be: {city} {pet}\n")
 
+
+# ######## DAY 2 ########
+# print("\nDay 2.1 \n Write a program that adds the digits in a 2 digit number. \n e.g. if the input was 35, then the output should be 3 + 5 = 8\n")
+
+# '''
+# PSUEDO CODE
+
+# Input two digits
+# access the the digits and store them in a variable 
+# convert the string into int
+# add the two digits 
+# print solution
+
+# '''
+
+# number = input("Enter a two digit number\n")
+# first_digit = int(number[0])
+# second_digit = int(number[1])
+# print(f"You have entereted {number}, the sum of its digits is {first_digit + second_digit}")
+
+# print("\n********ALTERNATIVE APPROCH**************")
+
+# number = input("Enter a two digit number\n")
+# sum = 0
+# for n in range(0, len(number)):
+#   sum += int(number[n])
+# print(sum)
+
+# print("\n********ALTERNATIVE APPROCH**************")
+
+# '''
+# PSUEDO CODE
+
+# User inputs a number 
+# number is passed through a function called getSum to add all the digits 
+
+# Access the digits by converting the int to list
+
+# '''
+
+# n = int(input("\nEnter any number, I will tell you the sum of its digits?"))
+
+# def getSum(number):
+#   sum = 0 
+#   while number !=0:
+#     sum += number % 10
+#     number = int(number / 10)
+#   print(sum)
+# getSum(number = n)
+
+
+# print("\nDay 2.2 \n Create a program using maths and f-Strings that tells us how many days, weeks, months we have left if we live until 90 years old.")
+# year = int(input("Enter your year of birth\n"))
+# left_years = int(input("how many years you are expected to live\n"))
+# year_remaining = (year + left_years ) -2020
+# print(f"years to 90 is {year_remaining}")
+
+# months = year_remaining*12
+# weeks = months*4
+# days = weeks*7
+
+# print(f"You have {months} months or {weeks} weeks or {days} days remaining before you are {left_years} years old")
+
+# print("\nDay 2.2 \n Calculate Tip.\n \n If the bill was $150.00, split between 5 people, with 12% tip \n. ")
+
+# bill = int(input('What is the amount of your bill?\n'))
+# people = int(input("How many people were in your party?\n"))
+# tip = int(input("What % of the bill is the tip? 10, 12, or 15\n"))
+
+# bill_per_person = round((bill / people ) * (1+ tip /100), 2)
+
+# print(f"each person in your party should pay {bill_per_person} to cover both bill and tip")
 
 ######## DAY 2 ########
-print("Day 2.1 \n Write a program that adds the digits in a 2 digit number. \n e.g. if the input was 35, then the output should be 3 + 5 = 8")
+height = int(input("what is your height?\n"))
+bill = 0
 
-'''
-PSUEDO CODE
+if height > 120:
+  
+  age = int(input("what is your age?\n"))
+  
+  if age > 18:
+    bill = 12
+    print(f"Your bill is {bill}")
+  elif age >= 12 and age <= 18:
+    bill = 7
+    print(f"Your bill is {bill}")
+  else:
+    bill = 5
+    print(f"Your bill is {bill}")
+  
+  want_photo = input('Do you want photo? Y or N\n')
+  
+  if want_photo == "Y":
+    bill += 2
+  print(f"you bill is {bill}")
 
-Input two digits
-access the the digits and store them in a variable 
-convert the string into int
-add the two digits 
-print solution
+else:
+  print("Can't Ride")
 
-'''
 
-number = input("Enter a two digit number\n")
-first_digit = int(number[0])
-second_digit = int(number[1])
-print(f"You have entereted {number}, the sum of its digits is {first_digit + second_digit}")
 
-print("********ALTERNATIVE APPROCH**************")
-
-'''
-PSUEDO CODE
-
-User inputs a number 
-number is passed through a function called getSum to add all the digits 
-
-Access the digits by converting the int to list
-
-'''
-
-n = int(input("Enter any number, I will tell you the sum of its digits?"))
-
-def getSum(number):
-  sum = 0 
-  while number !=0:
-    sum += number % 10
-    number = int(number / 10)
-  print(sum)
-getSum(number = n)
