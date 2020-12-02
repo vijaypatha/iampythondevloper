@@ -110,4 +110,39 @@ else:
   print("Can't Ride")
 
 
+######## DAY 3.1 ########
+# print('LEAP YEAR IDENTIFIER')
+# year = int(input("Enter a year?"))
 
+# if year % 4 == 0:
+#   if year % 100 == 0:
+#     if year % 400 == 0:
+#       print(f"{year} is a Lear Year")
+#     else:
+#       print(f"{year} is a Not a leap")
+#   else:
+#     print(f"{year} is a Leap Year")
+# else:
+#   print(f"{year} is not a leap year!")
+
+
+######## DAY 3.2 ########
+print(f"Welcome to Tresure Island")
+
+decision1 = input("left or right")
+if decision1 == "left":
+  decision2 = input("swim or wait?")
+  if decision2 == "wait":
+    decision3 = input("Which Door: Red, blue, yellow?")
+    if decision3 == "yellow":
+      print("You Win")
+    elif decision3 == "red":
+      print("Burned by fire, game over")
+    elif decision3 == "blue":
+      print("eaten by beasts; game over")
+    else:
+      print("Game over")
+  else:
+    print("attacked by trout, Game over")
+else:
+  print("Fall into a pit and game over")
