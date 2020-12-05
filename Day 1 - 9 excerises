@@ -183,3 +183,46 @@ map[row-1][col-1] = "X"
 
 # 🚨 Don't change the code below 👇
 print(f"{row1}\n{row2}\n{row3}")
+
+############ Day 5 ##########
+# print("DAY 5! People")
+#Password Generator Project
+import random
+letters = ['a', 'b', 'c', 'd'
+'n', 'o', 'p', 'q', 'r', 's',
+ 'D', 'E', 'F', 'G', 'H', 'I'
+'S', 'T', 'U', 'V', 'W', 'X',
+numbers = ['0', '1', '2', '3'
+symbols = ['!', '#', '$', '%'
+print("Welcome to the PyPassw
+nr_letters= int(input("How ma
+nr_symbols = int(input(f"How 
+nr_numbers = int(input(f"How 
+#Eazy Level - Order not rando
+#e.g. 4 letter, 2 symbol, 2 n
+password = ""
+for i in range(0,nr_letters):
+  password += random.choice(l
+for i in range(0,nr_symbols):
+  password += random.choice(s
+for i in range(0,nr_numbers):
+  password += random.choice(n
+print(f"Your new password is 
+#Hard Level - Order of charac
+#e.g. 4 letter, 2 symbol, 2 n
+pword = []
+for i in range(0,nr_letters):
+  pword += random.choice(lett
+for i in range(0,nr_symbols):
+  pword += random.choice(symb
+for i in range(0,nr_numbers):
+  pword += random.choice(numb
+print(f"Your new password is 
+random.shuffle(pword)
+print(f"Your new password is 
+def listtostring(l_pword):
+  password = ""
+  for i in l_pword:
+    password += i
+  print(password)
+listtostring(l_pword = pword)
