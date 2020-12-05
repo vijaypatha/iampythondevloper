@@ -146,3 +146,40 @@ if decision1 == "left":
     print("attacked by trout, Game over")
 else:
   print("Fall into a pit and game over")
+  
+  
+  # 🚨 Don't change the code below 👇
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+'''
+2 row 2 colum = map[1][1]
+identify the column by [position[0]]
+remember the column you choose 
+now pick the row [position[1]]
+replace with list modification
+list[0] = "ABC"
+
+map[position[1][0]]
+
+'''
+row = int(position[1])
+col = int(position[0])
+# print(row)
+# print(col)
+# print(map[1][1])
+map[row-1][col-1] = "X"
+
+
+
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
