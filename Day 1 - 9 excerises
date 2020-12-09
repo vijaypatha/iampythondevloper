@@ -252,3 +252,39 @@ for i in range(len(chosen_word)):
   if letter == guess:
     blanks[i] = letter
 print(blanks)
+
+########### Day 7 #################
+Step 1 
+
+word_list = ["aardvark", "baboon", "camel"]
+
+#Step 1: Choose a random item from the list
+
+import random
+
+chosen_word = random.choice(word_list)
+print(chosen_word)
+#Step 2: Create a "_" for the length of the word choosen
+word = []
+
+for position in range(len(chosen_word)):
+  word += "_"
+print(word)
+
+# Step 4: If the letter matches with the word, raplace "_" with a the letter
+end_of_game = False
+
+while not end_of_game:
+# STep 3: Ask the user to pick a letter
+  user_input = input("Pick a letter \n")
+
+  for i in range(len(chosen_word)):
+    if chosen_word[i] == user_input:
+      word[i] = user_input
+  print(word)
+
+# Step 5: Continue to do this, until the use guess all the "_"
+  if "_" not in word:
+    end_of_game = True
+
+print("You Win")
