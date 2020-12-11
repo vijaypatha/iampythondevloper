@@ -313,3 +313,46 @@ def prime(number):
   else:
     print("Not prime")
 prime(number)
+
+
+alphabet = ['a', 'b', 
+'h', 'i', 'j', 'k', 'l
+'q', 'r', 's', 't', 'u
+'z',' ','a', 'b', 'c',
+'i', 'j', 'k', 'l', 'm
+'r', 's', 't', 'u', 'v
+']
+from encryptlogo impor
+print(logo)
+message = "\n You can 
+messages with this app
+print(message.upper())
+direction = input("Typ
+type 'decode' to decry
+text = input("Type you
+shift = int(input("Typ
+#TODO-1: Create a func
+that takes the 'text' 
+def encrypt(plain_text
+  encypted_text = ""
+  for letter in plain_
+    position = alphabe
+    new_position = pos
+    new_letter = alpha
+    encypted_text+= ne
+  print(f"The encrypte
+encypted_text}")
+def decrypt(encypted_t
+  decypted_text = ""
+  for letter in encypt
+    position = alphabe
+    new_position = pos
+    new_letter = alpha
+    decypted_text+= ne
+  print(f"The decryted
+")   
+if direction == "encod
+  encrypt(plain_text=t
+elif direction == "dec
+  decrypt(encypted_tex
+shift_amount=shift)
