@@ -1,0 +1,17 @@
+from replit import clear
+
+auction_dict = {}
+bidding_strat = True
+
+while bidding_strat:
+  bidder = input("What is your name?")
+  bid = int(input("what is the bid amount?"))
+  auction_dict[bidder] = bid
+
+  should_continue = input("Are there any other bidders? Type 'yes or 'no'.\n")
+  
+  if should_continue == "no":
+    bidding_strat = False
+    print(f"The winner is {max(auction_dict, key=auction_dict.get)} with a bid of ${auction_dict[max(auction_dict, key=auction_dict.get)]}")
+  else:
+    clear()
