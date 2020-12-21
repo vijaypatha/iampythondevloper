@@ -97,3 +97,59 @@ def game():
 
     
 game()
+
+# GAME GAME
+
+import random 
+
+answer = random.randint(1,100)
+
+easy_level = 10
+hard_level = 5
+
+def difficulty_level():
+  level = input("Pick a difficulty level - Type: easy or hard")
+
+  if level == "easy":
+    return easy_level
+  else:
+    return hard_level
+
+def check_nums(guess, answer, lives):
+  if guess > answer:
+    print("Too High\n")
+    return lives-1
+  elif guess < answer:
+    print('Too low\n')
+    return lives-1
+  else:
+    print(f"You matched! The answer is {answer} \n")
+
+
+
+def game():
+
+  # Welcome to the game
+  print("Welcome to the game\n")
+  print("I'm guessing a number between 1-100 \n")
+
+  # User need to pick a difficulty level.
+
+  lives = difficulty_level()
+  print(f"you have {lives} lives\n")
+
+  # User need pick a number and that should be compared to the number picked by computer
+
+  guess = 0
+
+  while guess != answer:
+    guess = int(input("Guess a number between 1-100?\n"))
+    lives = check_nums(guess, answer, lives)
+    print(f'You have {lives} remaining\n')
+
+    if lives == 0:
+      print("You ran out lives! Sorry :( Game over")
+      print(f"The answer was {answer}")
+      return
+      
+game()
