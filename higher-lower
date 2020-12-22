@@ -1,0 +1,26 @@
+'''
+#1. Understand the Problem (Articulate what is the problem) (S, C, *Q*)
+
+
+
+#2. Logic tress should help you break down the problem into small groups/sections and ToDo assoicated with each groups
+
+1. Display: A,B, and ask question
+2. Compare: A and B (Who has more followers?)
+3. Feedback: That correct or wrong. 
+4. SCORE: Track score
+5. Next steps: Correct answer will become A and then there will new B. and game continues 
+6. Dynamic Score: Keep increasing the score. 
+
+
+#3. Design your approch to tackel each of the ToDos, for a code start with a Psuedo code for each ToDO
+
+# TODO
+1. Display
+$ text [Done]
+$ keys and values from dictionary (manual)
+$ loop access it later
+
+#4. Write code -> Run Code -> Fix the code until ToDo is complete (Logic trees to find solutions and then converge)
+
+'''
