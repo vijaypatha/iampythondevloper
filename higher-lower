@@ -24,3 +24,68 @@ $ loop access it later
 #4. Write code -> Run Code -> Fix the code until ToDo is complete (Logic trees to find solutions and then converge)
 
 '''
+from art import logo, vs
+from game_data import data
+import random
+from replit import clear
+
+# Kick off While Loop
+game_start = True
+points = 0 #Track points
+
+
+# While Loop STARTS
+while game_start:
+
+# DISPLAY 
+  print(logo)
+
+  rand_choice_a = random.choice(data)
+      #print(rand_choice_a)
+  print(f"Compare A: {rand_choice_a['name']}, {rand_choice_a['description']}, {rand_choice_a['country']}")
+
+  value_a = rand_choice_a['follower_count']
+  
+
+  print(vs)
+
+  rand_choice_b = random.choice(data)
+      #print(rand_choice_b)
+  print(f"Compare B: {rand_choice_b['name']}, {rand_choice_b['description']}, {rand_choice_b['country']}")
+
+  value_b = rand_choice_b['follower_count']
+  #print(value_b)
+
+  user_guess = (input("Who has more followers? Type A or B: "))
+
+# USER GUESS
+  
+  guess = user_guess.lower()
+
+# COMPARE THE USER GUESS with the RANDOM answer.
+
+  if guess == "a" and value_a > value_b:
+    print(f"Correct!{value_a} is greater than {value_b}")
+    points += 1
+    #print(f"You're right! Current Score is: {points} ")
+    clear()
+  elif guess == "b" and value_b > value_a:
+    print(f"Correct!{value_b} is greater than {value_a}")
+    points += 1
+    clear()
+  else:
+    game_start = False
+    print("You got it wrong")
+
+  clear()
+  
+print(f"A = {rand_choice_a['name']} has {value_a} followers")
+print(f"B = {rand_choice_b['name']} has {value_b} followers")
+
+print(f"You guessed {guess.upper()}")
+
+print("Hit the gree button " "Run " "to play again." )
+print(f"Total Correct Guesses is: {points} ")  
+  
+  
+  
