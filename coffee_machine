@@ -1,0 +1,86 @@
+from menu import MENU, resources
+
+# TODO
+""" 4. Check if we have sufficient resources 
+to make the ordered drink"""
+
+
+def check_resources(order_drink):
+    for resource in order_drink:
+        if resources[resource] <= order_drink[resource]:
+            print(f"Sorry, there is not enough {resource}")
+            return False
+        else:
+            return True
+
+
+# TODO
+""" 5. If there are sufficient resources to make the drink selected, then the program should
+prompt the user to insert coins."""
+
+
+def process_coins():
+    print("Please insert coins")
+    total = int(input("how many quarters: ")) * 0.25
+    total += int(input("how many dimes: ")) * 0.10
+    total += int(input("how many nickles: ")) * 0.05
+    total += int(input("how many pennies: ")) * 0.1
+    return total
+
+
+# TODO
+"""
+6. if coins received is greater than the cost of the drink then
+return the change
+"""
+
+
+def is_transaction_success(money_received, drink_cost):
+    if money_received >= drink_cost:
+        change = round(money_received - drink_cost, 2)
+        print(f"Here is the ${change} change")
+        global profit
+        profit += drink_cost
+    else:
+        print("Sorry that's not enough money!")
+        return False
+
+# TODO
+"""
+7. make Coffee and then deduct spent ingredients 
+"""
+
+
+def make_coffee(drink_name, drink_ordered):
+    for items in drink_ordered:
+        resources[items] -= drink_ordered[items]
+    print(f"Here is your {drink_name}")
+
+
+start_machine = True
+profit = 0
+
+while start_machine:
+    # TODO
+    # 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino)
+    user_input = input("What would you like? (espresso/latte/cappuccino)")
+    # TODO
+    # 2. Turn off the Coffee Machine by entering “off” to the prompt.
+    if user_input == "off":
+        start_machine = False
+    # TODO
+    # 3. Print Report
+    elif user_input == "report":
+        # print(original_resource_value())
+        print(f"Water:{resources['water']}")
+        print(f"Milk: {resources['milk']}")
+        print(f"Coffee:{resources['coffee']}")
+        print(f"Money: {profit}")
+    else:
+        drink = MENU[user_input]
+        print(drink['ingredients'])
+        if check_resources(drink['ingredients']):
+            payment = process_coins()
+            print(f"You paid {payment}, the drink costs {drink['cost']}")
+            if is_transaction_success(payment, drink['cost']):
+                make_coffee(user_input, drink['ingredients'])
