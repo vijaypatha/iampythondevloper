@@ -1,4 +1,34 @@
 # Creating Classes, Objects, Attributes, and Methods. 
+
+# Creating a class to model a User of the website
+class User:
+    pass
+
+
+# Creating an object
+user_1 = User()
+
+# Creating an attribute of the object user_1
+user_1.id = '001'
+user_1.username = 'vijay'
+
+print(user_1.username)
+
+# Creating an object called user_2
+user_2 = User()
+
+# Creating an attribute of the object user_1
+user_2.id = '002'
+user_2.username = 'heidi'
+
+print(user_2.id)
+
+"""
+It is becoming tedious to make object and the associated attributes for each user. So, using constructor, which allows
+to specify what should happen when an object is being created.  
+
+"""
+
 class UserC:
     def __init__(self, user_id, user_name):
         self.user_id = user_id
