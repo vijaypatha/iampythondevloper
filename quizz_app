@@ -56,3 +56,30 @@ print(f"User 4 is following {user_4.following} users")
 print(f"User 4 has {user_4.followers} users")
 print(f"User 3 is following {user_3.following} users")
 print(f"User 3 has {user_3.followers} users")
+
+
+""""
+Mimic Instagram basic user MVP i.e. user_id, user_name, followers, and following.
+"""
+class User:
+    def __init__(self, user_id, user_name):
+        self.user_id = user_id
+        self.user_name = user_name
+        self.followers = 0
+        self.following = 0
+
+    def follow(self, user):
+        self.following += 1
+        user.followers += 1
+
+
+user_1 = User("001", "Vijay")
+user_2 = User("002", "Heidi")
+
+user_1.follow(user_2)
+print(
+    f"user_1 i.e. {user_1.user_name} is following {user_2.user_name}.{user_1.user_name} is following {user_1.following} user(s)")
+print(f"{user_2.user_name} has {user_2.followers} follower(s)")
+
+
+
