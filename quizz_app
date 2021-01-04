@@ -82,4 +82,25 @@ print(
 print(f"{user_2.user_name} has {user_2.followers} follower(s)")
 
 
+# Definitions
+
+* Class is a blue print
+
+* Objects are like people. They’re living, breathing things that
+- have knowledge inside them about how to do things (methods) and
+- have memory inside them so they can remember things (attributes).
+
+* Attributes are things that a object has. Basically variables.
+* Methods are things that a object does. A function that is attached to an object is called method
+
+* Constructor:
+What Problem does constructor is solving?
+How can i specify all the starting pieces of information when i create object from a class.
+Constructor is part of the blueprint that allows us to specify what should happen when our object is being constructred.
+
+Initialing is setting something to its starting value. Python creates space in memory to remember details of attributes
+
+* Self it a way for us to refer to the object that going to be created from the class blueprint. Self is the object being created.
+
+
 
